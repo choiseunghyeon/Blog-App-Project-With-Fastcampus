@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import { POST_DETAIL_PATH, POST_EDIT_PATH } from "routes"
 
 function PostDetail() {
   return (
@@ -12,7 +14,9 @@ function PostDetail() {
         </div>
         <div className="post__utils-box">
           <div className="post__delete">삭제</div>
-          <div className="post__edit">수정</div>
+          <div className="post__edit">
+            <Link to={`${POST_EDIT_PATH}/1`}>수정</Link>
+          </div>
         </div>
         <div className="post__text">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus

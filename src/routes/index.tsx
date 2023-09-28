@@ -10,9 +10,13 @@ import { Navigate, createBrowserRouter } from "react-router-dom"
 
 export const MAIN_PATH = "/"
 export const POST_LIST_PATH = "/posts"
-export const POST_DETAIL_PATH = "/post/:id"
+
+export const POST_DETAIL_PATH = "/posts"
+export const POST_DAYNAMIC_DETAIL_PATH = "/:id"
+
 export const POST_NEW_PATH = "/posts/new"
 export const POST_EDIT_PATH = "/posts/edit"
+export const POST_DYNAMIC_EDIT_PATH = "/:id"
 export const PROFILE_PATH = "/profile"
 export const LOGIN_PATH = "/login"
 export const SIGN_UP_PATH = "/signup"
@@ -27,7 +31,7 @@ export const router = createBrowserRouter([
     element: <PostsPage />,
   },
   {
-    path: POST_DETAIL_PATH,
+    path: POST_DETAIL_PATH + POST_DAYNAMIC_DETAIL_PATH,
     element: <Detail />,
   },
   {
@@ -35,7 +39,7 @@ export const router = createBrowserRouter([
     element: <PostNew />,
   },
   {
-    path: POST_EDIT_PATH,
+    path: POST_EDIT_PATH + POST_DYNAMIC_EDIT_PATH,
     element: <PostEdit />,
   },
   {
